@@ -1,26 +1,32 @@
-Automated Reservation System for Japan Tour Guides
-Overview
-This project implements an automated email processing system built with NestJS, which:
+# 🗾 Japan Tour Guide Reservation System  
 
-Monitors a Gmail inbox for incoming reservation emails.
+**Automated Gmail → Google Calendar Booking Sync**  
 
-Uses LangChain (with Groq as the LLM provider) to analyze email content and detect if it’s related to a Japan tour guide booking.
+A NestJS-powered backend that processes reservation emails, extracts dates, checks availability, and syncs with Google Calendar—with AI-powered parsing (LangChain + Groq) and automated responses.  
 
-Extracts reservation dates and checks for availability.
+---
 
-Syncs confirmed bookings with Google Calendar via the Google Cloud Platform API.
+## 🛠️ Tech Stack  
+| Component          | Technology Used                          |
+|--------------------|------------------------------------------|
+| **Backend**        | NestJS (TypeScript)                      |
+| **AI/Email Parsing** | LangChain + Groq (LLM)                  |
+| **Google APIs**    | Gmail API, Google Calendar API           |
+| **Auth/Cloud**     | Google Cloud Platform (OAuth 2.0)        |
+| **Email Sending**  | Nodemailer / Gmail API                   |
 
-Sends automated replies (success confirmation or request for new dates if unavailable).
 
-Tech Stack
-Backend: NestJS (TypeScript)
+---
 
-AI/LLM: LangChain + Groq (for email intent classification & data extraction)
+## ✨ Features  
+- **AI-Powered Email Processing**  
+  - LangChain + Groq classify emails and extract structured data (dates, tour type).  
+- **Smart Conflict Detection**  
+  - Checks Google Calendar for existing bookings before confirmation.  
+- **Automated Replies**  
+  - ✅ Success: `"Your tour on [DATE] is confirmed!"`  
+  - ❌ Conflict: `"Dates unavailable. Please suggest alternatives."`  
+- **Secure Sync**  
+  - OAuth 2.0 for Gmail/Calendar access with Google Cloud Secrets.  
 
-Google APIs:
-
-Gmail API (email monitoring)
-
-Google Calendar API (booking synchronization)
-
-Google Cloud Platform (authentication & serverless functions if applicable)
+---
