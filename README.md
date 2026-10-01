@@ -31,4 +31,4 @@ A NestJS-powered backend that processes reservation emails, extracts dates, chec
 
 ---
 
-<img src="n8n.png" alt="JavaPaint Screenshot">
+<img src="n8n.PNG" alt="JavaPaint Screenshot">
