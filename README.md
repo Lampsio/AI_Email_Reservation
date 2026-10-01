@@ -30,3 +30,5 @@ A NestJS-powered backend that processes reservation emails, extracts dates, chec
   - OAuth 2.0 for Gmail/Calendar access with Google Cloud Secrets.  
 
 ---
+
+<img src="n8n.png" alt="JavaPaint Screenshot">
